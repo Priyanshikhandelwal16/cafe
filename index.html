@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Ambroisie — Premium Cafe · Coffee · Food · Ambience</title>
+  <meta name="description" content="L'Ambroisie is a premium cafe in Gurugram offering artisan coffee, gourmet food, stunning ambience, and a space designed for conversations, creativity, and comfort." />
+  <meta property="og:title" content="L'Ambroisie — Where Every Sip Tells a Story" />
+  <meta property="og:description" content="Inspired by Third Wave, Blue Tokai, Roastery. A real cafe experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/download.svg">
+</head>
+<body>
+
+<!-- ═══ GRAIN ════ -->
+<div id="grain" aria-hidden="true"></div>
+
+<!-- ═══ AMBIENT ORBS ════ -->
+<div class="ambient-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- ═══ CURSOR ════ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ════════════════════════════════ PRELOADER ════════════════════════════ -->
+<div id="preloader" role="status" aria-label="Loading">
+  <div class="pre-cup-wrap">
+    <div class="pre-steam" aria-hidden="true">
+      <div class="pre-steam-puff"></div>
+      <div class="pre-steam-puff"></div>
+      <div class="pre-steam-puff"></div>
+    </div>
+    <div class="pre-cup"></div>
+    <div class="pre-saucer"></div>
+  </div>
+  <p class="pre-logo">L'Ambroisie</p>
+  <p class="pre-tagline">Specialty Coffee &amp; Kitchen</p>
+  <div class="pre-bar"><div class="pre-fill"></div></div>
+  <p class="pre-pct">0%</p>
+</div>
+
+<!-- ════════════════════════════════ NAV ═══════════════════════════════════ -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo">L'Ambroisie</a>
+  <ul class="nav-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#ambience">Spaces</a></li>
+    <li><a href="#specials">Today's Picks</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <a href="#reservation" class="nav-cta" id="nav-reserve-btn"><span>Reserve a Table</span></a>
+</nav>
+
+<!-- ════════════════════════════════ HERO ═══════════════════════════════════ -->
+<section id="hero" aria-label="Hero — Cafe Interior">
+
+  <!-- Real cafe photo background -->
+  <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+
+  <!-- Sun beam overlays -->
+  <div class="hero-sunbeams" aria-hidden="true">
+    <div class="sunbeam"></div>
+    <div class="sunbeam"></div>
+    <div class="sunbeam"></div>
+    <div class="sunbeam"></div>
+  </div>
+
+  <!-- Three.js canvas — aroma particles + steam -->
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Soft edge gradients -->
+  <div class="hero-vine-left" aria-hidden="true"></div>
+  <div class="hero-vine-right" aria-hidden="true"></div>
+
+  <!-- Main hero copy -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">Est. 2019 · Gurugram's Finest</p>
+    <h1 class="hero-title">
+      <span class="line-wrapper"><span class="line">Where Every</span></span>
+      <span class="line-wrapper"><span class="line"><em>Cup of Coffee</em></span></span>
+      <span class="line-wrapper"><span class="line">Starts a Story</span></span>
+    </h1>
+    <p class="hero-sub">
+      Step into a world of warm lighting, honest food, and coffee brewed with intention. This is not just a cafe — it's your third place.
+    </p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary" id="hero-menu-btn"><span>Explore Menu</span></a>
+      <a href="#reservation" class="btn-ghost" id="hero-reserve-btn">Book a Table</a>
+    </div>
+  </div>
+
+  <!-- Floating stats — right side -->
+  <div class="hero-stats" aria-hidden="true">
+    <div class="hero-stat">
+      <span class="hero-stat-num" data-count="48" data-suffix="+">0+</span>
+      <span class="hero-stat-label">Menu Items</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num" data-count="5" data-suffix="★">0★</span>
+      <span class="hero-stat-label">Avg Rating</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num" data-count="12000" data-suffix="+">0+</span>
+      <span class="hero-stat-label">Happy Guests</span>
+    </div>
+  </div>
+
+  <!-- Aroma particles -->
+  <div class="css-particles" aria-hidden="true"></div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-mouse"></div>
+    <span class="scroll-label">Discover</span>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════ ABOUT ══════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+
+    <div class="about-text-col">
+      <span class="eyebrow">Our Story</span>
+      <h2 class="section-title" id="about-heading">
+        A Cafe Born From<br /><em>Passion &amp; Purpose</em>
+      </h2>
+      <p class="section-body">
+        L'Ambroisie was founded on a single belief — that a great cafe isn't just about the coffee. It's about the feeling. The warmth when you walk in. The smell of freshly ground beans. The corner seat that becomes yours.
+      </p>
+      <p class="section-body">
+        Inspired by the culture of Third Wave Coffee, Blue Tokai, and the Roastery Coffee House, we've built a space that honours craft, community, and comfort in equal measure.
+      </p>
+
+      <div class="about-badges">
+        <div class="about-badge-item">
+          <span class="about-badge-num">5+</span>
+          <span class="about-badge-label">Years Open</span>
+        </div>
+        <div class="about-badge-item">
+          <span class="about-badge-num">18</span>
+          <span class="about-badge-label">Coffee Origins</span>
+        </div>
+        <div class="about-badge-item">
+          <span class="about-badge-num">4.8</span>
+          <span class="about-badge-label">Star Rating</span>
+        </div>
+      </div>
+
+      <a href="#reservation" class="btn-primary" id="about-reserve-btn"><span>Visit Us Today</span></a>
+    </div>
+
+    <div class="about-photo-col">
+      <img
+        src="assets/cafe_barista.jpg"
+        alt="Barista preparing specialty coffee at L'Ambroisie espresso bar"
+        loading="lazy"
+      />
+      <div class="about-photo-overlay">
+        <p class="about-photo-quote">"Coffee is not just a drink. It is a ritual of intention."</p>
+        <p class="about-photo-author">— Head Barista, L'Ambroisie</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════ MENU ════════════════════════════════════ -->
+<section id="menu" aria-labelledby="menu-heading">
+  <div class="menu-header">
+    <span class="eyebrow eyebrow--light">Our Menu</span>
+    <h2 class="section-title section-title--light" id="menu-heading">
+      Crafted for <em>Every Craving</em>
+    </h2>
+    <p class="section-body section-body--light">
+      From morning cold brew to midnight desserts — every item made in-house with seasonal produce.
+    </p>
+  </div>
+
+  <div class="marquee-outer" aria-label="Scrolling menu showcase">
+    <div class="marquee-track" role="list">
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_coffee.jpg" alt="Velvet Flat White — signature espresso drink" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Specialty Coffee</span>
+          <h3 class="card-name">Velvet Flat White</h3>
+          <p class="card-desc">Double ristretto, micro-foamed whole milk, rosetta pour. Our most-ordered drink.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 420</span>
+            <span class="card-badge">Bestseller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_burger.jpg" alt="Truffle Wagyu Smash Burger" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Gourmet Burgers</span>
+          <h3 class="card-name">Truffle Wagyu Smash</h3>
+          <p class="card-desc">Wagyu beef, black truffle aioli, aged cheddar, caramelised onion jam.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 1,490</span>
+            <span class="card-badge">Chef's Pick</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_pasta.jpg" alt="Black Truffle Pappardelle pasta" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Handmade Pasta</span>
+          <h3 class="card-name">Truffle Pappardelle</h3>
+          <p class="card-desc">House-made egg pappardelle, shaved Périgord truffle, parmesan foam.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 1,290</span>
+            <span class="card-badge">Seasonal</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_dessert.jpg" alt="Gold Leaf Tiramisu dessert" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Desserts</span>
+          <h3 class="card-name">Gold Leaf Tiramisu</h3>
+          <p class="card-desc">Mascarpone cream, espresso-soaked ladyfingers, edible gold leaf dusting.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 690</span>
+            <span class="card-badge">House Classic</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_mocktail.jpg" alt="Bloom and Citrus craft mocktail" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Craft Mocktails</span>
+          <h3 class="card-name">Bloom &amp; Citrus</h3>
+          <p class="card-desc">Elderflower cordial, yuzu foam, hibiscus, gold-dusted garnish.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 580</span>
+            <span class="card-badge">Zero-Proof</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_coffee.jpg" alt="Espresso Macchiato" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Specialty Coffee</span>
+          <h3 class="card-name">Espresso Macchiato</h3>
+          <p class="card-desc">Intense ristretto, whisper of steamed milk, served in warmed ceramic.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 360</span>
+            <span class="card-badge">Purist's Choice</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_burger.jpg" alt="Portobello and Brie burger" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Gourmet Burgers</span>
+          <h3 class="card-name">Portobello &amp; Brie</h3>
+          <p class="card-desc">Grilled portobello, melted brie, roasted peppers, walnut-herb spread.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 890</span>
+            <span class="card-badge">Vegetarian</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" role="listitem">
+        <div class="card-img-wrap">
+          <img src="assets/menu_dessert.jpg" alt="Chocolate fondant cake" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Cakes &amp; Bakes</span>
+          <h3 class="card-name">Molten Chocolate Fondant</h3>
+          <p class="card-desc">Warm dark chocolate cake, salted caramel centre, vanilla bean ice cream.</p>
+          <div class="card-bottom">
+            <span class="card-price">₹ 520</span>
+            <span class="card-badge">Warm Served</span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /marquee-track -->
+  </div><!-- /marquee-outer -->
+</section>
+
+<!-- ════════════════════════════════ AMBIENCE ════════════════════════════════ -->
+<section id="ambience" aria-labelledby="ambience-heading">
+  <div class="section-inner">
+    <div class="amb-intro">
+      <span class="eyebrow">Our Spaces</span>
+      <h2 class="section-title" id="ambience-heading">
+        Spaces That <em>Feel Like Home</em>
+      </h2>
+      <p class="section-body">
+        Three distinct areas — each with its own character and purpose. Whether you're here to work, unwind, or celebrate, we have a corner that's perfectly yours.
+      </p>
+    </div>
+
+    <!-- Photo grid -->
+    <div class="amb-grid">
+      <div class="amb-cell">
+        <img src="assets/cafe_seating.jpg" alt="Cafe main seating area with warm lighting" loading="lazy" />
+        <div class="amb-cell-label">
+          <h3>The Lounge</h3>
+          <p>Deep sofas · Warm amber light · Up to 40 guests</p>
+        </div>
+      </div>
+      <div class="amb-cell">
+        <img src="assets/cafe_barista.jpg" alt="Espresso bar and barista station" loading="lazy" />
+        <div class="amb-cell-label">
+          <h3>Espresso Bar</h3>
+          <p>Counter seating · Watch the craft · 12 stools</p>
+        </div>
+      </div>
+      <div class="amb-cell">
+        <img src="assets/cafe_outdoor.jpg" alt="Garden outdoor seating area" loading="lazy" />
+        <div class="amb-cell-label">
+          <h3>Garden Terrace</h3>
+          <p>Open sky · Plants &amp; fairy lights · 30 guests</p>
+        </div>
+      </div>
+      <div class="amb-cell">
+        <img src="assets/amb_lounge.jpg" alt="Reading corner with books" loading="lazy" />
+        <div class="amb-cell-label">
+          <h3>Reading Corner</h3>
+          <p>Books · Quiet zone · Perfect for focus</p>
+        </div>
+      </div>
+      <div class="amb-cell">
+        <img src="assets/cafe_evening.jpg" alt="Evening cafe lighting and ambience" loading="lazy" />
+        <div class="amb-cell-label">
+          <h3>Evening Glow</h3>
+          <p>Edison lights · Warm evenings · Date nights</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area selector tabs -->
+    <div class="amb-tabs-row" role="tablist" aria-label="Cafe areas">
+      <button class="amb-tab-item active" id="tab-lounge" role="tab" aria-selected="true">
+        <span class="amb-tab-name">The Lounge</span>
+        <span class="amb-tab-desc">9 AM – 11 PM · Intimate &amp; Warm</span>
+      </button>
+      <button class="amb-tab-item" id="tab-bar" role="tab" aria-selected="false">
+        <span class="amb-tab-name">Espresso Bar</span>
+        <span class="amb-tab-desc">7 AM – 10 PM · Craft &amp; Social</span>
+      </button>
+      <button class="amb-tab-item" id="tab-terrace" role="tab" aria-selected="false">
+        <span class="amb-tab-name">Garden Terrace</span>
+        <span class="amb-tab-desc">4 PM – 11 PM · Breezy &amp; Romantic</span>
+      </button>
+      <button class="amb-tab-item" id="tab-work" role="tab" aria-selected="false">
+        <span class="amb-tab-name">Work Zone</span>
+        <span class="amb-tab-desc">All Day · Fast WiFi &amp; Power</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CHEF'S SPECIALS ══════════════════════════════ -->
+<section id="specials" aria-labelledby="specials-heading">
+  <div class="specials-bg" aria-hidden="true"></div>
+  <div class="section-inner">
+    <div class="specials-menu">
+      <span class="eyebrow eyebrow--light">Chef's Table</span>
+      <h2 class="section-title section-title--light" id="specials-heading">
+        Today's <em>Inspired</em> Selections
+      </h2>
+
+      <div class="special-row" data-name="Wagyu Beef Wellington" data-desc="Wrapped in mushroom duxelles and golden puff pastry. Served with truffle jus.">
+        <div class="special-row-left">
+          <div class="special-row-name">Wagyu Beef Wellington</div>
+          <div class="special-row-tag">Signature Main · Limited Daily</div>
+        </div>
+        <div class="special-row-price">₹ 2,490</div>
+      </div>
+
+      <div class="special-row" data-name="Truffle Wagyu Smash" data-desc="Wagyu patty, black truffle aioli, aged cheddar, caramelised onion jam.">
+        <div class="special-row-left">
+          <div class="special-row-name">Truffle Wagyu Smash</div>
+          <div class="special-row-tag">Gourmet Burger · Chef's Pick</div>
+        </div>
+        <div class="special-row-price">₹ 1,490</div>
+      </div>
+
+      <div class="special-row" data-name="Black Truffle Pappardelle" data-desc="House-made egg pasta, shaved Périgord truffle, aged parmesan foam.">
+        <div class="special-row-left">
+          <div class="special-row-name">Black Truffle Pappardelle</div>
+          <div class="special-row-tag">Handmade Pasta · Seasonal</div>
+        </div>
+        <div class="special-row-price">₹ 1,290</div>
+      </div>
+
+      <div class="special-row" data-name="Gold Leaf Tiramisu" data-desc="Mascarpone cream, espresso-soaked ladyfingers, cocoa dust, edible gold leaf.">
+        <div class="special-row-left">
+          <div class="special-row-name">Gold Leaf Tiramisu</div>
+          <div class="special-row-tag">Signature Dessert · House Classic</div>
+        </div>
+        <div class="special-row-price">₹ 690</div>
+      </div>
+
+      <div class="special-row" data-name="Bloom &amp; Citrus Mocktail" data-desc="Elderflower cordial, yuzu foam, hibiscus ice sphere, gold-dusted garnish.">
+        <div class="special-row-left">
+          <div class="special-row-name">Bloom &amp; Citrus</div>
+          <div class="special-row-tag">Craft Mocktail · Zero-Proof</div>
+        </div>
+        <div class="special-row-price">₹ 580</div>
+      </div>
+    </div>
+
+    <div class="specials-visual" aria-hidden="true">
+      <img src="assets/cafe_flatlay.jpg"   class="special-img active" alt="Today's signature dish" />
+      <img src="assets/menu_burger.jpg"    class="special-img"        alt="Truffle Wagyu Smash" />
+      <img src="assets/menu_pasta.jpg"     class="special-img"        alt="Truffle Pappardelle" />
+      <img src="assets/menu_dessert.jpg"   class="special-img"        alt="Gold Leaf Tiramisu" />
+      <img src="assets/menu_mocktail.jpg"  class="special-img"        alt="Bloom and Citrus" />
+      <div class="specials-visual-overlay">
+        <div class="specials-visual-title">Wagyu Beef Wellington</div>
+        <div class="specials-visual-desc">Wrapped in mushroom duxelles and golden puff pastry.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ TESTIMONIALS ══════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="reviews-heading">
+  <div class="testimonials-bg" aria-hidden="true"></div>
+  <div class="section-inner">
+    <span class="eyebrow eyebrow--light" style="text-align:center; display:block">Guest Stories</span>
+    <h2 class="section-title section-title--light" id="reviews-heading" style="text-align:center">
+      Words That <em>Warm Our Hearts</em>
+    </h2>
+
+    <div class="testimonials-wrap">
+      <div class="testimonial-slide active" id="testimonial-1">
+        <span class="quote-icon" aria-hidden="true">"</span>
+        <p class="testimonial-text">
+          L'Ambroisie feels like the cafes I've fallen in love with in Paris and Bali — but right here in Gurugram. The coffee is outstanding, the food is honest, and the corner seat by the window is mine every Saturday morning.
+        </p>
+        <span class="testimonial-author-name">Priya Chandran</span>
+        <span class="testimonial-author-role">Food Critic · The Mumbai Edit</span>
+      </div>
+      <div class="testimonial-slide" id="testimonial-2">
+        <span class="quote-icon" aria-hidden="true">"</span>
+        <p class="testimonial-text">
+          I've hosted two anniversaries here and both times it exceeded every expectation. The staff are warm, the food is consistently brilliant, and the atmosphere makes you want to stay forever.
+        </p>
+        <span class="testimonial-author-name">Arjun &amp; Meera Nair</span>
+        <span class="testimonial-author-role">Regular Guests since 2021</span>
+      </div>
+      <div class="testimonial-slide" id="testimonial-3">
+        <span class="quote-icon" aria-hidden="true">"</span>
+        <p class="testimonial-text">
+          As someone who works remotely, I've spent dozens of mornings here. The WiFi is fast, the coffee is exceptional, and no one ever makes you feel like you've overstayed your welcome. This place gets it right.
+        </p>
+        <span class="testimonial-author-name">Rahul Singhania</span>
+        <span class="testimonial-author-role">Travel Writer &amp; Remote Worker</span>
+      </div>
+
+      <div class="testimonial-controls">
+        <button class="t-btn" id="t-prev" aria-label="Previous review">&#8592;</button>
+        <div class="t-dots" role="tablist" aria-label="Review pages">
+          <div class="t-dot active" role="tab" aria-label="Review 1"></div>
+          <div class="t-dot" role="tab" aria-label="Review 2"></div>
+          <div class="t-dot" role="tab" aria-label="Review 3"></div>
+        </div>
+        <button class="t-btn" id="t-next" aria-label="Next review">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ RESERVATION ════════════════════════════════════ -->
+<section id="reservation" aria-labelledby="reservation-heading">
+  <div class="section-inner">
+
+    <!-- Left: cafe photo with badge -->
+    <div class="res-photo-side">
+      <img src="assets/cafe_seating.jpg" alt="Beautiful seating inside L'Ambroisie cafe" loading="lazy" />
+      <div class="res-photo-badge">
+        <span class="res-photo-badge-text">Walk-ins<br />Welcome</span>
+        <span class="res-photo-badge-sub">Reservations preferred</span>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="res-form-col">
+      <span class="eyebrow">Reserve</span>
+      <h2 class="section-title" id="reservation-heading">
+        Claim Your <em>Table</em>
+      </h2>
+      <p class="section-body" style="margin-bottom:0">
+        Tables fill up fast, especially on weekends. Reserve yours now and we'll make sure everything is perfect when you arrive.
+      </p>
+
+      <div class="res-info-items">
+        <div class="res-info-item">
+          <div class="res-info-icon">📍</div>
+          <div>
+            <div class="res-info-label">Location</div>
+            <div class="res-info-value">42, Mehrauli–Gurgaon Road, DLF Phase 2, Gurugram 122002</div>
+          </div>
+        </div>
+        <div class="res-info-item">
+          <div class="res-info-icon">🕐</div>
+          <div>
+            <div class="res-info-label">Hours</div>
+            <div class="res-info-value">Mon–Fri: 8 AM – 11 PM &nbsp;·&nbsp; Sat–Sun: 9 AM – 12 AM</div>
+          </div>
+        </div>
+        <div class="res-info-item">
+          <div class="res-info-icon">📞</div>
+          <div>
+            <div class="res-info-label">Call / WhatsApp</div>
+            <div class="res-info-value">+91 98765 43210</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-form-wrap">
+        <form id="reservation-form" novalidate aria-label="Table reservation form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="res-name">Full Name</label>
+              <input class="form-input" type="text" id="res-name" name="name" placeholder="Arjun Sharma" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="res-phone">Phone</label>
+              <input class="form-input" type="tel" id="res-phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="res-date">Date</label>
+              <input class="form-input" type="date" id="res-date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="res-time">Time</label>
+              <select class="form-select form-input" id="res-time" name="time" required>
+                <option value="" disabled selected>Select time</option>
+                <option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                <option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option>
+                <option>04:00 PM</option><option>06:00 PM</option><option>07:00 PM</option>
+                <option>08:00 PM</option><option>09:00 PM</option><option>10:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="res-guests">Guests</label>
+              <select class="form-select form-input" id="res-guests" name="guests" required>
+                <option value="" disabled selected>How many?</option>
+                <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+                <option>4 Guests</option><option>5 Guests</option><option>6 Guests</option>
+                <option>7+ Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="res-area">Preferred Area</label>
+              <select class="form-select form-input" id="res-area" name="area">
+                <option value="" disabled selected>Any preference?</option>
+                <option>The Lounge</option><option>Espresso Bar</option>
+                <option>Garden Terrace</option><option>Reading Corner</option>
+                <option>No Preference</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label class="form-label" for="res-notes">Special Requests</label>
+              <input class="form-input" type="text" id="res-notes" name="notes" placeholder="Anniversary? Dietary needs? Surprise setup?" />
+            </div>
+          </div>
+          <button type="submit" class="form-submit" id="res-submit-btn"><span>Confirm My Reservation</span></button>
+        </form>
+        <div class="form-success" role="alert">
+          <div class="form-success-icon">☕</div>
+          <h3 class="form-success-title">See You Soon!</h3>
+          <p class="form-success-text">
+            Your table is reserved. A confirmation has been sent.<br />We'll have your favourite corner ready.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CTA ════════════════════════════════════════════ -->
+<section id="cta" aria-label="Call to action">
+  <div class="cta-bg" aria-hidden="true"></div>
+  <span class="eyebrow eyebrow--light">Come As You Are</span>
+  <h2 class="section-title section-title--light">
+    Your Table Is <em>Always Ready</em>
+  </h2>
+  <p class="section-body section-body--light">
+    Whether it's a Monday morning coffee or a Saturday evening dinner — L'Ambroisie is always open, always warm, always yours.
+  </p>
+  <div class="cta-actions">
+    <a href="#reservation" class="btn-primary" id="cta-reserve-btn"><span>Reserve Now</span></a>
+    <a href="tel:+919876543210" class="btn-ghost" id="cta-call-btn">Call Us</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="footer-brand-name">L'Ambroisie</span>
+      <p class="footer-tagline">
+        Specialty coffee, honest food, and a space that feels like home. Come for the coffee, stay for the feeling.
+      </p>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" aria-label="Instagram">&#x25C6;</a>
+        <a href="#" class="social-icon" aria-label="Facebook">&#x25A0;</a>
+        <a href="#" class="social-icon" aria-label="Twitter / X">&#x25B2;</a>
+      </div>
+    </div>
+    <div>
+      <span class="footer-col-title">Navigate</span>
+      <ul class="footer-links-list">
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#ambience">Our Spaces</a></li>
+        <li><a href="#specials">Today's Picks</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Experience</span>
+      <ul class="footer-links-list">
+        <li><a href="#ambience">The Lounge</a></li>
+        <li><a href="#ambience">Espresso Bar</a></li>
+        <li><a href="#ambience">Garden Terrace</a></li>
+        <li><a href="#">Private Dining</a></li>
+        <li><a href="#">Corporate Events</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Visit</span>
+      <ul class="footer-links-list">
+        <li><a href="#">42, MG Road, Gurugram</a></li>
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="mailto:hello@lambroisie.in">hello@lambroisie.in</a></li>
+        <li><a href="#">Mon–Fri: 8 AM – 11 PM</a></li>
+        <li><a href="#">Sat–Sun: 9 AM – 12 AM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 L'Ambroisie. All rights reserved.</span>
+    <span>
+      <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="#">Terms of Service</a>
+    </span>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ DETAIL MODAL ══════════════════════════════════ -->
+<div id="card-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+    <div class="modal-grid">
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <span id="modal-tag" class="modal-tag"></span>
+        <h3 id="modal-title" class="modal-title-text"></h3>
+        <p id="modal-desc" class="modal-desc-text"></p>
+        
+        <div class="modal-ingredients-section">
+          <span class="modal-section-label">Key Ingredients</span>
+          <div id="modal-ingredients" class="modal-ingredients-list">
+            <!-- Dynamic tags -->
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <span id="modal-price" class="modal-price-val"></span>
+          <a href="#reservation" class="modal-btn-book"><span>Book a Table</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ SCRIPTS ═══════════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/experience.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
