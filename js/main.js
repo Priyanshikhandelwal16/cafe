@@ -111,7 +111,8 @@ function initHeroParallax() {
       if (bg) {
         bg.style.transform = `scale(1.12) translate(${px * 0.4}px, ${py * 0.4 + scrollOffset}px)`;
       }
-      if (content) {
+      // On touch devices, don't override CSS transform (which centres content via translateY(-50%))
+      if (content && !isTouch) {
         content.style.transform = `translate(${px * -0.6}px, ${py * -0.6}px)`;
       }
       if (canvas) {
